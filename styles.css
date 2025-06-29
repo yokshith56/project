@@ -1,6 +1,6 @@
- body {
+body {
             font-family: 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: linear-gradient(135deg, #74ebd5 0%, #3f5efb 100%);
             margin: 0;
             padding: 0;
             min-height: 100vh;
@@ -18,7 +18,7 @@
         .card {
             background: #fff;
             border-radius: 1rem;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.08), 0 1.5px 4px rgba(0,0,0,0.04);
+            box-shadow: 0 4px 24px rgba(63,94,251,0.08), 0 1.5px 4px rgba(63,94,251,0.04);
             width: 320px;
             padding: 2rem;
             transition: transform 0.2s, box-shadow 0.2s;
@@ -29,19 +29,19 @@
 
         .card:hover, .card:focus-within {
             transform: translateY(-8px) scale(1.03);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 3px 8px rgba(0,0,0,0.08);
+            box-shadow: 0 8px 32px rgba(63,94,251,0.15), 0 3px 8px rgba(63,94,251,0.08);
         }
 
         .card-title {
             font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 1rem;
-            color: #2d3a4b;
+            color: #2563eb;
         }
 
         .card-content {
             font-size: 1rem;
-            color: #4a5568;
+            color: #334155;
             margin-bottom: 1.5rem;
         }
 
@@ -51,7 +51,7 @@
         }
 
         .button {
-            background: linear-gradient(90deg, #667eea 0%, #5a67d8 100%);
+            background: linear-gradient(90deg, #2563eb 0%, #3f5efb 100%);
             color: #fff;
             border: none;
             border-radius: 0.5rem;
@@ -59,13 +59,14 @@
             font-size: 1rem;
             font-weight: 500;
             cursor: pointer;
-            transition: background 0.2s, box-shadow 0.2s;
-            box-shadow: 0 2px 8px rgba(102,126,234,0.12);
+            transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+            box-shadow: 0 2px 8px rgba(63,94,251,0.12);
         }
 
         .button:hover, .button:focus {
-            background: linear-gradient(90deg, #5a67d8 0%, #434190 100%);
-            box-shadow: 0 4px 16px rgba(90,103,216,0.18);
+            background: linear-gradient(90deg, #3f5efb 0%, #2563eb 100%);
+            box-shadow: 0 4px 16px rgba(63,94,251,0.18);
+            transform: translateY(-2px) scale(1.03);
         }
 
         .toggle-switch {
@@ -82,7 +83,7 @@
         .toggle-slider {
             width: 40px;
             height: 22px;
-            background: #e2e8f0;
+            background: #e0e7ff;
             border-radius: 22px;
             position: relative;
             transition: background 0.2s;
@@ -99,11 +100,11 @@
             background: #fff;
             border-radius: 50%;
             transition: transform 0.2s;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+            box-shadow: 0 1px 4px rgba(63,94,251,0.08);
         }
 
         .toggle-switch input[type="checkbox"]:checked + .toggle-slider {
-            background: #667eea;
+            background: #2563eb;
         }
 
         .toggle-switch input[type="checkbox"]:checked + .toggle-slider::before {
@@ -113,7 +114,7 @@
         .card .tooltip {
             visibility: hidden;
             opacity: 0;
-            background: #2d3748;
+            background: #1e293b;
             color: #fff;
             text-align: center;
             border-radius: 0.5rem;
@@ -126,6 +127,7 @@
             font-size: 0.95rem;
             pointer-events: none;
             z-index: 10;
+            box-shadow: 0 2px 8px rgba(63,94,251,0.12);
         }
 
         .card:hover .tooltip, .card:focus-within .tooltip {
