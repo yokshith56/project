@@ -1,0 +1,147 @@
+ body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        .interface-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 3rem 1rem;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 1rem;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08), 0 1.5px 4px rgba(0,0,0,0.04);
+            width: 320px;
+            padding: 2rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover, .card:focus-within {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 3px 8px rgba(0,0,0,0.08);
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #2d3a4b;
+        }
+
+        .card-content {
+            font-size: 1rem;
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .button {
+            background: linear-gradient(90deg, #667eea 0%, #5a67d8 100%);
+            color: #fff;
+            border: none;
+            border-radius: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 8px rgba(102,126,234,0.12);
+        }
+
+        .button:hover, .button:focus {
+            background: linear-gradient(90deg, #5a67d8 0%, #434190 100%);
+            box-shadow: 0 4px 16px rgba(90,103,216,0.18);
+        }
+
+        .toggle-switch {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .toggle-switch input[type="checkbox"] {
+            display: none;
+        }
+
+        .toggle-slider {
+            width: 40px;
+            height: 22px;
+            background: #e2e8f0;
+            border-radius: 22px;
+            position: relative;
+            transition: background 0.2s;
+            cursor: pointer;
+        }
+
+        .toggle-slider::before {
+            content: '';
+            position: absolute;
+            left: 3px;
+            top: 3px;
+            width: 16px;
+            height: 16px;
+            background: #fff;
+            border-radius: 50%;
+            transition: transform 0.2s;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        }
+
+        .toggle-switch input[type="checkbox"]:checked + .toggle-slider {
+            background: #667eea;
+        }
+
+        .toggle-switch input[type="checkbox"]:checked + .toggle-slider::before {
+            transform: translateX(18px);
+        }
+
+        .card .tooltip {
+            visibility: hidden;
+            opacity: 0;
+            background: #2d3748;
+            color: #fff;
+            text-align: center;
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            position: absolute;
+            bottom: 110%;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: opacity 0.2s;
+            font-size: 0.95rem;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .card:hover .tooltip, .card:focus-within .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        @media (max-width: 700px) {
+            .interface-container {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 1.5rem;
+                padding: 2rem 0.5rem;
+            }
+            .card {
+                width: 100%;
+                min-width: 0;
+            }
+        }
